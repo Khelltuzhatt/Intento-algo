@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>MirandaPet 🐾</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>MirandaPet 🐾</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>🐾 Bienvenida/o a MirandaPet 🐾</h1>
-    
+
+  <!-- Pantalla de inicio -->
+  <div id="inicio">
+    <h1>🐾 Bienvenido/a a MirandaPet 🐾</h1>
+    <p>Tu mascota virtual que te acompaña y recuerda tus tareas.</p>
+    <button onclick="iniciarJuego()">Comenzar</button>
+  </div>
+
+  <!-- Pantalla del juego -->
+  <div id="juego" style="display:none;">
+    <h2>MirandaPet</h2>
+
     <!-- Imagen de la mascota -->
     <div id="pet-container">
-        <img id="pet" src="feliz.png" alt="MirandaPet">
+      <img id="pet" src="feliz.png" alt="MirandaPet">
     </div>
 
-    <!-- Estado -->
-    <p id="estado">Hambre: 50 | Energía: 50 | Felicidad: 50</p>
+    <!-- Barras de progreso -->
+    <div id="estadisticas">
+      <p>Hambre: <progress id="barraHambre" value="50" max="100"></progress></p>
+      <p>Energía: <progress id="barraEnergia" value="50" max="100"></progress></p>
+      <p>Felicidad: <progress id="barraFelicidad" value="50" max="100"></progress></p>
+    </div>
 
-    <!-- Botones -->
+    <!-- Botones de acción -->
     <div class="botones">
-        <button onclick="alimentar()">🍖 Alimentar</button>
-        <button onclick="jugar()">🎮 Jugar</button>
-        <button onclick="dormir()">💤 Dormir</button>
+      <button onclick="alimentar()">🍖 Alimentar</button>
+      <button onclick="jugar()">🎮 Jugar</button>
+      <button onclick="dormir()">💤 Dormir</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Recordatorios -->
+    <h2>📌 Recordatorios</h2>
+    <input type="text" id="nota" placeholder="Escribe un recordatorio...">
+    <button onclick="agregarRecordatorio()">Agregar</button>
+    <ul id="listaRecordatorios"></ul>
+
+    <!-- Reinicio -->
+    <div>
+      <button onclick="reiniciarJuego()">🔄 Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
