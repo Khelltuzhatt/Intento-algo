@@ -1,36 +1,41 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f0f8ff;
-    margin: 0;
-    padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 20px;
 }
 
-h1 {
-    color: #444;
+h1, h2 {
+  color: #444;
 }
 
 #pet-container {
-    margin: 20px;
+  margin: 20px;
 }
 
 #pet {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .botones button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #ffb347;
-    color: white;
-    transition: 0.3s;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ffb347;
+  color: white;
+  transition: 0.3s;
 }
 
-    .botones button:hover {
-        background: #ff884d;
-    }
+.botones button:hover {
+  background: #ff884d;
+}
+
+progress {
+  width: 200px;
+  height: 20px;
+}
